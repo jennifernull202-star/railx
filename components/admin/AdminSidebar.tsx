@@ -1,41 +1,51 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 export default function AdminSidebar() {
-  const path = usePathname();
-
-  const linkClass = (route: string) =>
-    `block px-6 py-3 text-sm font-medium ${
-      path.startsWith(route)
-        ? "bg-railBlue text-white"
-        : "text-railBlue hover:bg-gray-100"
-    }`;
-
   return (
-    <aside className="w-64 border-r bg-white shadow-sm">
-      <h2 className="text-2xl font-bold text-railBlue p-6 border-b">
-        Admin Panel
-      </h2>
+    <div className="w-full bg-primary text-white p-6 rounded-xl shadow-lg">
+      <h2 className="text-xl font-bold mb-6">Admin Panel</h2>
 
-      <nav className="mt-4">
-        <Link href="/admin" className={linkClass("/admin")}>
-          Dashboard Overview
+      <nav className="space-y-4">
+        <Link href="/admin" className="block hover:text-accent transition">
+          Dashboard
         </Link>
-        <Link href="/admin/listings" className={linkClass("/admin/listings")}>
-          Manage Listings
+
+        <Link href="/admin/users" className="block hover:text-accent transition">
+          Users
         </Link>
-        <Link href="/admin/users" className={linkClass("/admin/users")}>
-          Manage Users
+        
+        <Link href="/admin/listings" className="block hover:text-accent transition">
+          Listings
         </Link>
-        <Link
-          href="/admin/advertisers"
-          className={linkClass("/admin/advertisers")}
-        >
-          Advertisers
+
+        <Link href="/admin/contractors" className="block hover:text-accent transition">
+          Contractors
+        </Link>
+        
+        <Link href="/admin/rentals" className="block hover:text-accent transition">
+          Rentals
+        </Link>
+        
+        <Link href="/admin/real-estate" className="block hover:text-accent transition">
+          Real Estate
+        </Link>
+
+        <Link href="/admin/ads" className="block hover:text-accent transition">
+          Advertisements
+        </Link>
+
+        <Link href="/admin/reports" className="block hover:text-accent transition">
+          Reports
+        </Link>
+        
+        <Link href="/admin/fraud" className="block hover:text-accent transition">
+          Fraud Logs
+        </Link>
+
+        <Link href="/admin/settings" className="block hover:text-accent transition">
+          System Settings
         </Link>
       </nav>
-    </aside>
+    </div>
   );
 }
