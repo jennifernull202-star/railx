@@ -1,0 +1,9 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A1A2F"/>
+  <text x="600" y="280" font-family="Arial, sans-serif" font-size="60" fill="white" text-anchor="middle" font-weight="bold">
+    The Rail Exchange™
+  </text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="30" fill="#D1D5DB" text-anchor="middle">
+    Rail Industry Marketplace
+  </text>
+</svg>
