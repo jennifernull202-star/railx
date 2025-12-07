@@ -7,7 +7,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-railBlue text-white shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary text-white shadow-lg">
       {/* Main Header Bar */}
       <div className="h-[72px] max-w-[1280px] mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
@@ -17,37 +17,40 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center space-x-8 text-sm font-medium">
-          <Link href="/marketplace/equipment" className="hover:text-railAccent transition">
+          <Link href="/marketplace/equipment" className="hover:text-accent transition">
             Equipment
           </Link>
-          <Link href="/marketplace/tools" className="hover:text-railAccent transition">
+          <Link href="/marketplace/tools" className="hover:text-accent transition">
             Tools
           </Link>
-          <Link href="/marketplace/rail" className="hover:text-railAccent transition">
+          <Link href="/marketplace/rail" className="hover:text-accent transition">
             Materials
           </Link>
-          <Link href="/marketplace/rentals" className="hover:text-railAccent transition">
+          <Link href="/marketplace/rentals" className="hover:text-accent transition">
             Rentals
           </Link>
-          <Link href="/marketplace/real-estate" className="hover:text-railAccent transition">
+          <Link href="/marketplace/real-estate" className="hover:text-accent transition">
             Real Estate
           </Link>
-          <Link href="/contractors" className="hover:text-railAccent transition">
+          <Link href="/contractors" className="hover:text-accent transition">
             Contractors
+          </Link>
+          <Link href="/map-search" className="hover:text-accent transition">
+            Map Search
           </Link>
         </nav>
 
         {/* Right Side Actions */}
         <div className="hidden lg:flex items-center space-x-4">
-          <Link href="/login" className="text-sm hover:text-railAccent transition">
+          <Link href="/login" className="text-sm hover:text-accent transition">
             Login
           </Link>
-          <Link href="/register" className="text-sm hover:text-railAccent transition">
+          <Link href="/register" className="text-sm hover:text-accent transition">
             Register
           </Link>
           <Link
             href="/listings/create"
-            className="bg-white text-railBlue px-6 py-2 rounded-md font-semibold hover:bg-gray-100 transition"
+            className="bg-accent hover:bg-accent-dark text-white px-6 py-2 rounded-md font-semibold transition"
           >
             Post a Listing
           </Link>
@@ -66,25 +69,28 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-railBlue border-t border-white/10">
+        <div className="lg:hidden bg-primary border-t border-white/10">
           <nav className="max-w-[1280px] mx-auto px-6 py-4 space-y-3">
-            <Link href="/marketplace/equipment" className="block py-2 hover:text-railAccent transition">
+            <Link href="/marketplace/equipment" className="block py-2 hover:text-accent transition">
               Equipment
             </Link>
-            <Link href="/marketplace/tools" className="block py-2 hover:text-railAccent transition">
+            <Link href="/marketplace/tools" className="block py-2 hover:text-accent transition">
               Tools
             </Link>
-            <Link href="/marketplace/rail" className="block py-2 hover:text-railAccent transition">
+            <Link href="/marketplace/rail" className="block py-2 hover:text-accent transition">
               Materials
             </Link>
-            <Link href="/marketplace/rentals" className="block py-2 hover:text-railAccent transition">
+            <Link href="/marketplace/rentals" className="block py-2 hover:text-accent transition">
               Rentals
             </Link>
-            <Link href="/marketplace/real-estate" className="block py-2 hover:text-railAccent transition">
+            <Link href="/marketplace/real-estate" className="block py-2 hover:text-accent transition">
               Real Estate
             </Link>
-            <Link href="/contractors" className="block py-2 hover:text-railAccent transition">
+            <Link href="/contractors" className="block py-2 hover:text-accent transition">
               Contractors
+            </Link>
+            <Link href="/map-search" className="block py-2 hover:text-accent transition">
+              Map Search
             </Link>
             <div className="pt-4 space-y-3 border-t border-white/10">
               <Link href="/login" className="block py-2">
@@ -95,7 +101,7 @@ export default function Header() {
               </Link>
               <Link
                 href="/listings/create"
-                className="block bg-white text-railBlue px-6 py-2 rounded-md font-semibold text-center"
+                className="block bg-accent hover:bg-accent-dark text-white px-6 py-2 rounded-md font-semibold text-center transition"
               >
                 Post a Listing
               </Link>
