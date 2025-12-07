@@ -3,6 +3,7 @@ export const COVERAGE_REGIONS = [
   "Southeast",
   "Midwest",
   "Southwest",
+  "West Coast",
   "Northwest",
   "Canada",
 ];

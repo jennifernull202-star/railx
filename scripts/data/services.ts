@@ -4,7 +4,7 @@ export const CONTRACTOR_SERVICES = [
   "Vegetation Control",
   "Inspection Services",
   "Derailment Response",
-  "Bridge Work",
+  "Bridge Construction & Repair",
   "Ballast & Surfacing",
-  "Emergency Services",
+  "Emergency Response Services",
 ];
