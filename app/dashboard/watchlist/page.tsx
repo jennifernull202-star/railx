@@ -10,9 +10,10 @@ export default function WatchlistPage() {
   useEffect(() => {
     async function loadWatchlist() {
       try {
-        const res = await fetch("/api/watchlist");
+        const res = await fetch("/api/watchlist/list");
         const data = await res.json();
-        setItems(data.items || []);
+        // Extract listing from populated data
+        setItems(data.map((item: any) => item.listingId).filter(Boolean));
       } catch (error) {
         console.error("Failed to load watchlist:", error);
       } finally {
